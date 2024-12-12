@@ -31,6 +31,13 @@
     <link rel="stylesheet" href="{{ asset('assets/css/lib/file-upload.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/css/lib/audioplayer.css') }}">
+    <!-- Simple Notify -->
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/simple-notify.css') }}">
+    <!-- SSI Model -->
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/ssi-modal.min.css') }}">
+    @stack('plugin')
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+    @stack('css')
 </head>

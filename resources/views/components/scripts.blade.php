@@ -24,8 +24,15 @@
     <script src="{{ asset('assets/js/lib/file-upload.js') }}"></script>
     <!-- audioplayer -->
     <script src="{{ asset('assets/js/lib/audioplayer.js') }}"></script>
-
+    <!-- Simple Notify -->
+    <script src="{{ asset('assets/js/lib/simple-notify.min.js') }}"></script>
+    <!-- SSI Model -->
+    <script src="{{ asset('assets/js/lib/ssi-modal.min.js') }}"></script>
+    @stack('script')
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
     <!-- main js -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <?php echo (isset($script) ? $script   : '')?>
+
+    @stack('js')
 

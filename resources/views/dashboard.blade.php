@@ -3,8 +3,9 @@
 @php
 $title = 'Dashboard';
 $subTitle = 'CRM';
-$script = '<script src="' . asset('assets/js/homeTwoChart.js') . '"></script>';
 @endphp
+
+@section('title', 'Dashboard')
 
 @section('content')
 
