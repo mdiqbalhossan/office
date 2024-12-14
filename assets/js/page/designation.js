@@ -16,11 +16,13 @@ $(function() {
         let name = $(this).data('name');
         let status = $(this).data('status');
         let description = $(this).data('description');
+        let department = $(this).data('department');
         let updateUrl  = $(this).data('url')
-        $("#title").html('Edit Department')
+        $("#title").html('Edit Designation')
         $("#name").val(name)
         $("#status").val(status)
         $("#description").val(description)
+        $("#department").val(department)
         $('#submitBtn').html('Update');
         let url = updateUrl;
         url = url.replace(':id', id);

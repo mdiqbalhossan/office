@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use App\Models\Designation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class DesignationController extends Controller
 {
@@ -33,7 +34,24 @@ class DesignationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'status' => 'required',
+            'department' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->with('error', $validator->errors()->first());
+        }
+
+        Designation::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'status' => $request->status,
+            'department_id' => $request->department,
+        ]);
+
+        return redirect()->back()->with('success', __('Designation created successfully'));
     }
 
     /**
@@ -57,7 +75,24 @@ class DesignationController extends Controller
      */
     public function update(Request $request, Designation $designation)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'status' => 'required',
+            'department' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->with('error', $validator->errors()->first());
+        }
+
+        $designation->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'status' => $request->status,
+            'department_id' => $request->department,
+        ]);
+
+        return redirect()->back()->with('success', __('Designation updated successfully'));
     }
 
     /**
@@ -65,6 +100,7 @@ class DesignationController extends Controller
      */
     public function destroy(Designation $designation)
     {
-        //
+        $designation->delete();
+        return redirect()->back()->with('success', __('Designation deleted successfully'));
     }
 }

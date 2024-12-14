@@ -32,12 +32,11 @@
                                 class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Designations</a>
                     </li>
                     <li>
-                        <a href="invoice-add.html"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> Add
-                            new</a>
+                        <a href="{{ route('employee.index') }}"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> Manage Employee</a>
                     </li>
                     <li>
-                        <a href="invoice-edit.html"><i class="ri-circle-fill circle-icon text-danger-main w-auto"></i>
-                            Edit</a>
+                        <a href="{{ route('employee.create') }}"><i class="ri-circle-fill circle-icon text-danger-main w-auto"></i>
+                            Add Employee</a>
                     </li>
                 </ul>
             </li>

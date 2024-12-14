@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-24">
-                <form action="{{ route('department.store') }}" method="POST" id="form">
+                <form action="{{ route('designation.store') }}" method="POST" id="form">
                     @csrf
                     <div id="method_sec">
                     </div>
@@ -18,7 +18,7 @@
                         <div class="col-6 mb-20">
                             <label for="department" class="form-label fw-semibold text-primary-light text-sm mb-8">Department</label>
                             <select class="form-control radius-8 form-select" id="department" name="department">
-                                <option selected disabled>Select Department</option>
+                                <option value="" selected disabled>Select Department</option>
                                 @foreach ($departments as $department)
                                 <option value="{{ $department->id }}">{{ $department->name }}</option>
                                 @endforeach
@@ -27,7 +27,7 @@
                         <div class="col-6 mb-20">
                             <label for="status" class="form-label fw-semibold text-primary-light text-sm mb-8">Status </label>
                             <select class="form-control radius-8 form-select" id="status" name="status">
-                                <option selected disabled>Select Status</option>
+                                <option value="" selected disabled>Select Status</option>
                                 <option value="1">Active</option>
                                 <option value="0">Deactive</option>
                             </select>
