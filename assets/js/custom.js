@@ -69,4 +69,11 @@ $(function () {
             }
         );
     });
+
+
+    // Faltpickr Datepicker
+    $(".dateTime").flatpickr();
+
+    // Select2
+    $('.js-example-basic-single').select2();
 });

@@ -28,7 +28,7 @@
                     </span>
                     <input type="email"
                         class="form-control h-56-px bg-neutral-50 radius-12 @error('email') is-invalid @enderror"
-                        placeholder="Email" name="email" value="{{ old('email') }}" required autofocus
+                        placeholder="Email" name="email" value="{{ old('email') ?? 'admin@admin.com' }}" required autofocus
                         autocomplete="username">
 
                 </div>
@@ -42,7 +42,7 @@
                         </span>
                         <input type="password"
                             class="form-control h-56-px bg-neutral-50 radius-12 @error('password') is-invalid @enderror"
-                            id="your-password" placeholder="Password" name="password" required
+                            id="your-password" placeholder="Password" value="password" name="password" required
                             autocomplete="current-password">                        
                     </div>
                     <span

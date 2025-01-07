@@ -28,3 +28,37 @@ if(!function_exists('status')){
         return 'N/A';
     }
  }
+
+/**
+ * Get All Countries
+ */
+
+if(!function_exists('countries')){
+    function countries()
+    {
+        $jsonFile = file_get_contents(base_path('assets/json/countries.json'));
+        return json_decode($jsonFile, true);
+    }
+}
+
+/**
+ * Required Sign
+ */
+
+if(!function_exists('required_sign')){
+    function required_sign()
+    {
+        return '<span class="text-danger">*</span>';
+    }
+}
+
+/**
+ * Employee Id Generator
+ */
+
+if(!function_exists('employee_id')){
+    function employee_id()
+    {
+        return 'EMP-'.date('Ymd').'-'.rand(1000, 9999);
+    }
+}

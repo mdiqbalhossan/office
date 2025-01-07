@@ -12,7 +12,10 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        $employees = Employee::latest()->get();
+        $title = 'Employees';
+        $subTitle = 'Employees List';
+        return view('pages.employee.index', compact('employees', 'title', 'subTitle'));
     }
 
     /**
@@ -20,7 +23,9 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Employees';
+        $subTitle = 'Add Employee';
+        return view('pages.employee.addEdit', compact('title', 'subTitle'));
     }
 
     /**

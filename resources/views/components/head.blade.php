@@ -38,6 +38,9 @@
     @stack('plugin')
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
 
     @stack('css')
 </head>

@@ -65,8 +65,6 @@
         </div>
         <!-- Latest Performance End -->
     </div>
-
-    @include('pages.designations.__addEditModal')
 @endsection
 
 @push('js')
