@@ -40,6 +40,22 @@
                     </li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">
+                    <iconify-icon icon="flowbite:calendar-month-outline" class="menu-icon"></iconify-icon>
+                    <span>Leave Management</span>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li>
+                        <a href="{{ route('designation.index') }}"><i
+                                class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Leave Application</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('leave-types.index') }}"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>
+                            Leave Types</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </aside>

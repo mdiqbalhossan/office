@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class EmployeeDocuments extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'employee_id',
+        'name',
+        'file',
+    ];
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
 }

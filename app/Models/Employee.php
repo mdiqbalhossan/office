@@ -70,4 +70,9 @@ class Employee extends Model
         }
         return $employeeId;
     }
+
+    public function documents()
+    {
+        return $this->hasMany(EmployeeDocuments::class);
+    }
 }

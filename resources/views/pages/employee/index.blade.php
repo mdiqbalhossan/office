@@ -48,6 +48,10 @@
                                             class="w-32-px h-32-px bg-info-focus text-info-main rounded-circle d-inline-flex align-items-center justify-content-center viewBtn">
                                             <iconify-icon icon="mdi:eye"></iconify-icon>
                                         </a>
+                                        <a href="{{ route('document.index', ['employee_id' => $employee->id]) }}"
+                                            class="w-32-px h-32-px bg-warning-focus text-warning-main rounded-circle d-inline-flex align-items-center justify-content-center documentBtn">
+                                            <iconify-icon icon="mdi:file-document"></iconify-icon>
+                                        </a>
                                         <a href="{{ route('employee.edit', $employee) }}"
                                             class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center editBtn">
                                             <iconify-icon icon="lucide:edit"></iconify-icon>
