@@ -21,4 +21,14 @@ class EmployeeExtraDetails extends Model
     {
         return $this->belongsTo(Employee::class);
     }
+
+    public function scopeAllowances()
+    {
+        return $this->where('type', 'allowances');
+    }
+
+    public function scopeDeductions()
+    {
+        return $this->where('type', 'deductions');
+    }
 }

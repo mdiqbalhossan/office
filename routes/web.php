@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DesignationController;
 use App\Http\Controllers\EmployeeController;
@@ -21,6 +22,11 @@ Route::middleware('auth')->group(function () {
     Route::resource('/department', DepartmentController::class);
     Route::resource('/designation', DesignationController::class);
     Route::resource('/employee', EmployeeController::class);
+
+    // AjaxController
+    Route::controller(AjaxController::class)->group(function () {
+        Route::get('/get-designations', [AjaxController::class, 'getDesignations']);
+    });
 });
 
 require __DIR__.'/auth.php';

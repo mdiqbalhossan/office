@@ -18,33 +18,6 @@ $(function () {
         showNotification("warning", "Warning!", message);
     }
 
-    /**
-     * Show Notification Modal
-     * @param {*} status
-     * @param {*} title
-     * @param {*} text
-     */
-    function showNotification(status, title, text) {
-        new Notify({
-            status: status,
-            title: title,
-            text: text,
-            effect: "slide",
-            speed: 300,
-            customClass: "",
-            customIcon: "",
-            showIcon: true,
-            showCloseButton: true,
-            autoclose: true,
-            autotimeout: 3000,
-            notificationsGap: null,
-            notificationsPadding: null,
-            type: "outline",
-            position: "right top",
-            customWrapper: "",
-        });
-    }
-
     $(document).on("click", ".deleteData", function (e) {
         e.preventDefault();
         ssi_modal.confirm(
@@ -77,3 +50,31 @@ $(function () {
     // Select2
     $('.js-example-basic-single').select2();
 });
+
+
+/**
+     * Show Notification Modal
+     * @param {*} status
+     * @param {*} title
+     * @param {*} text
+     */
+function showNotification(status, title, text) {
+    new Notify({
+        status: status,
+        title: title,
+        text: text,
+        effect: "slide",
+        speed: 300,
+        customClass: "",
+        customIcon: "",
+        showIcon: true,
+        showCloseButton: true,
+        autoclose: true,
+        autotimeout: 3000,
+        notificationsGap: null,
+        notificationsPadding: null,
+        type: "outline",
+        position: "right top",
+        customWrapper: "",
+    });
+}

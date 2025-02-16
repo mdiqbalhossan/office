@@ -53,12 +53,40 @@ if(!function_exists('required_sign')){
 }
 
 /**
- * Employee Id Generator
+ * Show amount
  */
 
-if(!function_exists('employee_id')){
-    function employee_id()
+if(!function_exists('showAmount')){
+    function showAmount($amount)
     {
-        return 'EMP-'.date('Ymd').'-'.rand(1000, 9999);
+        return '$' . number_format($amount, 2);
+    }
+}
+
+/**
+ * Allowances Calculate
+ */
+
+if(!function_exists('allowancesCalculate')){
+    function allowancesCalculate($amount, $type, $basic)
+    {
+        if($type == 'percentage'){
+            return showAmount($basic * ($amount / 100));
+        }
+        return showAmount($amount);
+    }
+}
+
+/**
+ * Deductions Calculate
+ */
+
+if(!function_exists('deductionsCalculate')){
+    function deductionsCalculate($amount, $type, $basic)
+    {
+        if($type == 'percentage'){
+            return showAmount($basic * ($amount / 100));
+        }
+        return showAmount($amount);
     }
 }

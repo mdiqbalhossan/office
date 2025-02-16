@@ -55,4 +55,19 @@ class Employee extends Model
     {
         return $this->hasMany(EmployeeExtraDetails::class);
     }
+
+    /**
+     * Generate employee id
+     */
+    public static function generateEmployeeId()
+    {
+        $employee = Employee::latest()->first();
+        if ($employee) {
+            $id = $employee->employee_id;
+            $employeeId = $id + 1;
+        } else {
+            $employeeId = 1001;
+        }
+        return $employeeId;
+    }
 }
