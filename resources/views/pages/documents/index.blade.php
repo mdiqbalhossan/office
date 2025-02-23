@@ -51,11 +51,12 @@
                                             <iconify-icon icon="lucide:edit"></iconify-icon>
                                         </a>
                                         <a href="javascript:void(0)"
-                                            class="w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center deleteData">
+                                            class="w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center deleteData" 
+                                            data-id="{{ $document->id }}">
                                             <iconify-icon icon="mingcute:delete-2-line"></iconify-icon>
                                         </a>
-                                        <form action="{{ route('document.destroy', $document->id) }}" method="post"
-                                            id="deleteForm">
+                                        <form action="{{ route('document.destroy', $document) }}" method="post" 
+                                            id="deleteForm_{{ $document->id }}">
                                             @method('DELETE')
                                             @csrf
                                         </form>

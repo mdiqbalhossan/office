@@ -90,3 +90,14 @@ if(!function_exists('deductionsCalculate')){
         return showAmount($amount);
     }
 }
+
+/**
+ * Show Date
+ */
+
+if(!function_exists('showDate')){
+    function showDate($date)
+    {
+        return \Carbon\Carbon::parse($date)->format('d M, Y');
+    }
+}

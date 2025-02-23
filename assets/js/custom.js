@@ -20,6 +20,7 @@ $(function () {
 
     $(document).on("click", ".deleteData", function (e) {
         e.preventDefault();
+        let id = $(this).data("id");
         ssi_modal.confirm(
             {
                 content: "Are you sure you want to delete?",
@@ -32,7 +33,7 @@ $(function () {
             },
             function (result) {
                 if (result){
-                    $("#deleteForm").submit();
+                    $("#deleteForm_"+id).submit();
                 }                    
                 else{
                     showNotification("error", "Error!", 'Your item is safe!');

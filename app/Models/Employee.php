@@ -27,6 +27,10 @@ class Employee extends Model
         'photo',
     ];
 
+    protected $appends = [
+        'full_name',
+    ];
+
     protected $dates = [
         'date_of_birth',
     ];

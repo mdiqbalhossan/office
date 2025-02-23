@@ -47,12 +47,36 @@
                 </a>
                 <ul class="sidebar-submenu">
                     <li>
-                        <a href="{{ route('designation.index') }}"><i
+                        <a href="{{ route('leaves.index') }}"><i
                                 class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Leave Application</a>
                     </li>
                     <li>
                         <a href="{{ route('leave-types.index') }}"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>
                             Leave Types</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">
+                    <iconify-icon icon="flowbite:database-outline" class="menu-icon"></iconify-icon>
+                    <span>Loan Management</span>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li>
+                        <a href="{{ route('loans.index', ['status' => 'pending']) }}"><i
+                                class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Pending Loans</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('loans.index') }}"><i
+                                class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Manage Loans</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('leaves.index') }}"><i
+                                class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Repayments</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('loan-types.index') }}"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>
+                            Loan Types</a>
                     </li>
                 </ul>
             </li>
